@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nova+Square&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply m-0 p-0 box-border font-hedvig;
+}
+
+.navlink::after {
+  @apply content-[''] h-[1.5px] w-0 bg-primary absolute left-0 opacity-0 transition-all duration-300 pointer-events-none;
+}
+
+.navlink:hover::after {
+  @apply w-full left-0 opacity-100;
+}
+
+.icons {
+  @apply text-white hover:text-primary cursor-pointer;
+}
