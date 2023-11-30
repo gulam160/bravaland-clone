@@ -59,7 +59,7 @@ const Carousel = () => {
           </button>
         </div>
       )}
-      <div className="overflow-hidden">
+      <div className="overflow-hidden sm:h-[35vh]">
         <motion.div
           key={index}
           variants={{
@@ -71,11 +71,12 @@ const Carousel = () => {
           animate="center"
           exit="exit"
           transition={{ duration: 0.6 }}
+          className="sm:h-full"
         >
           <Image
             src={carouselData[index]?.image}
             alt={`carousel_${carouselData[index]?.id}`}
-            className="w-full h-auto"
+            className="w-full h-auto sm:h-full object-cover"
           />
         </motion.div>
       </div>

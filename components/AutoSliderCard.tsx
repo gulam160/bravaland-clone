@@ -22,12 +22,12 @@ const AutoSliderCard: React.FC<AutoSliderCardProps> = ({
         background: background,
         borderRadius: "300px 30px 30px 300px",
       }}
-      className="flex justify-between w-[350px] mx-4 cursor-pointer"
+      className="flex justify-between w-[350px] sm:w-[300px] mx-4 cursor-pointer"
     >
       <Image
         src={image}
         alt={`slider-${id}`}
-        className="w-36 h-auto rounded-full"
+        className="w-36 sm:w-28 h-auto rounded-full"
       />
       <div className="flex flex-col boreder border-red-600 justify-between py-6 px-4">
         <h1 className="text-white text-right text-3xl font-bold font-nova">
