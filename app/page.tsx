@@ -1,15 +1,20 @@
 "use client";
 import AutoSliderCard from "@/components/AutoSliderCard";
-import Carousel from "@/components/Carousel";
+import CarouselAuto from "@/components/Carousel";
 import NewArrivalCard from "@/components/NewArrivalCard";
 import { autoSliderData } from "@/constants/autoSliderData";
-import { newArrivalCardData } from "@/constants/newArrivalCardData";
+import {
+  newArrivalCardData,
+  responsiveOptions,
+} from "@/constants/newArrivalCardData";
 import Marquee from "react-fast-marquee";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 function Home() {
   return (
     <main>
-      <Carousel />
+      <CarouselAuto />
       <section className="my-10 py-2 sm:my-2 md:my-4 lg:4">
         <Marquee className="whitespace-nowrap" pauseOnHover={true} speed={60}>
           {autoSliderData &&
@@ -36,8 +41,14 @@ function Home() {
             Elevated style you can take with you into the 3D.
           </p>
         </div>
-        <div className="w-full my-8">
-          <div className="flex flex-row justify-around items-center flex-wrap gap-8 px-4">
+        <div className="w-full px-3 my-6">
+          <Carousel
+            responsive={responsiveOptions}
+            swipeable
+            draggable
+            removeArrowOnDeviceType={["tablet", "mobile"]}
+            itemClass=""
+          >
             {newArrivalCardData.map(({ action, id, image, product }) => (
               <NewArrivalCard
                 key={id}
@@ -47,7 +58,7 @@ function Home() {
                 product={product}
               />
             ))}
-          </div>
+          </Carousel>
         </div>
       </section>
     </main>

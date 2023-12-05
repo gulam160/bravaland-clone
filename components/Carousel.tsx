@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-const Carousel = () => {
+const CarouselAuto = () => {
   const [ishovered, setIsHovered] = useState(false);
   const [index, setIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(index);
@@ -84,4 +84,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default CarouselAuto;

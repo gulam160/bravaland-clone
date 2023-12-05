@@ -13,7 +13,7 @@ const NewArrivalCard: React.FC<NewArrivalCardProps> = (props) => {
 
   return (
     <div
-      className="w-96 h-96 rounded-lg cursor-pointer relative shadow-arrival-card"
+      className="w-96 h-96 mx-4 rounded-lg cursor-pointer relative shadow-arrival-card"
       tabIndex={0}
     >
       <Image
